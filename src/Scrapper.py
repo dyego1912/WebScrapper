@@ -21,7 +21,7 @@ from src.utilis import get_project_root
 
 #Método utilizado para gerar e exportar o arquivo JSON contendo os anúncios coletados
 def escrever_json(dic,ini,fim):
-    file_name = str(root)+"\\.results\\anuncios_json\\anuncios_"+(str(ini))+"_"+str(fim+1)+".json"
+    file_name = str(root)+"\\results\\anuncios_json\\anuncios_"+(str(ini))+"_"+str(fim+1)+".json"
     dic = json.dumps(dic, indent=4, sort_keys=False, ensure_ascii=False)
     with codecs.open(file_name, 'a', encoding='utf-8') as f:
         f.write(dic)
@@ -50,7 +50,7 @@ root = get_project_root()
 #Laço de repetição responsável pela conversão (parsing) dos arquivos html em objetos do tipo árvore,
 #que possam ser analisados afim de encontrar as informações desejadas
 for t in range (num_pagina_inicial, num_pagina_final, -1):
-    filename = str(root)+"\\.results\\paginas_html\\paginas_html_"+str(t)+".txt"
+    filename = str(root)+"\\results\\paginas_html\\paginas_html_"+str(t)+".txt"
     with open(filename,'r') as f:
         arquivo_txt_html = f.read()
 
