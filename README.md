@@ -1,1 +1,3 @@
-Pasta responsável pelo armazenamento das informações extraídas.
+Pasta responsável pelo armazenamento das informações 
+
+extraídas.
