@@ -23,13 +23,13 @@ class Anuncio():
     modalidade = ""
     dedicacao = ""
     empresa = ""
-    estado = ""
+    localizacao = ""
     area_atuacao = ""
     data_publicacao = ""
     descricao = ""
 
 #Método utilizado para definir os atributos da classe
-    def insere_anuncio(self, num_anuncio, pag_anuncio, codigo, titulo, link, responsavel, modalidade, dedicacao, empresa, estado, area_atuacao, data_publicacao, descricao):
+    def insere_anuncio(self, num_anuncio, pag_anuncio, codigo, titulo, link, responsavel, modalidade, dedicacao, empresa, localizacao, area_atuacao, data_publicacao, descricao):
         self.num_anuncio = num_anuncio
         self.pag_anuncio = pag_anuncio
         self.codigo = codigo
@@ -39,7 +39,7 @@ class Anuncio():
         self.modalidade = modalidade
         self.dedicacao = dedicacao
         self.empresa = empresa
-        self.estado = estado
+        self.localizacao = localizacao
         self.area_atuacao = area_atuacao
         self.data_publicacao = data_publicacao
         self.descricao = descricao
