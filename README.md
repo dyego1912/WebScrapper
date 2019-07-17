@@ -1,5 +1,5 @@
 
-Script escrito por Dyego Silva de Oliveira
+Projeto desenvolvido por Dyego Silva de Oliveira
 em maio de 2019 para o Trabalho de Conclusão do
 curso de Bacharelado em Sistemas de Informação
 pela Universidade Federal do Acre.
