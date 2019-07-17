@@ -27,7 +27,7 @@ o site "https://empregos.profissionaisti.com.br?p=" com o número da página, lo
 https://empregos.profissionaisti.com.br?p=66.
 
 Depois de coletado o conteúdo HTML das páginas, os dados são exportados no caminho:
-/results/paginas_html do projeto
+/.results/paginas_html do projeto
 
 """
 
@@ -73,9 +73,9 @@ indice_pagina = pagina_final
 root = get_project_root()
 
 #Exporta o contéudo HTML das páginas
-#São criados arquivos txt na pasta \results\paginas_html do projeto
+#São criados arquivos txt na pasta \.results\paginas_html do projeto
 for o in lista_paginas_html:
-    filename = (str(root)) +"\\results\\paginas_html\\paginas_html_" + str(indice_pagina) + ".txt"
+    filename = (str(root)) +"\\.results\\paginas_html\\paginas_html_" + str(indice_pagina) + ".txt"
     with open(filename, 'a') as f:
         f.write(str(o))
     indice_pagina = indice_pagina - 1
