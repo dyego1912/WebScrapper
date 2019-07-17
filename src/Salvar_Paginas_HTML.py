@@ -36,20 +36,29 @@ from src.utilis import get_project_root
 from requests import get
 from bs4 import BeautifulSoup
 
-#lista para armazenar as páginas HTML
+#Função para exportar o conteúdo HTML das páginas
+#São criados arquivos txt na pasta \results\paginas_html do projeto
+def exporta_html(lista_paginas_html, indice_pagina):
+    for o in lista_paginas_html:
+        filename = (str(root)) + "\\results\\paginas_html\\paginas_html_" + str(indice_pagina) + ".txt"
+        with open(filename, 'a') as f:
+            f.write(str(o))
+        indice_pagina = indice_pagina - 1
+    f.close()
 
+#lista para armazenar as páginas HTML
 lista_paginas_html = []
 
 #url inicial
 url_main = "https://empregos.profissionaisti.com.br/?p="
 
-#indices para as páginas do site -> Usar da última para a primeira página do site
-pagina_inicial = 1
-pagina_final = 228
+#indices para as páginas do site
+pagina_inicial = 0
+pagina_final = 1
 
 #Laço de repetição responsável pelo controle dos acessos às páginas e pela extração dos conteúdos HTML
 for indice in range(pagina_final,pagina_inicial,-1):
-
+    print(indice)
 #Concatenação da url com o índice da página
     url_page = url_main+str(indice)
 
@@ -73,10 +82,4 @@ indice_pagina = pagina_final
 root = get_project_root()
 
 #Exporta o contéudo HTML das páginas
-#São criados arquivos txt na pasta \results\paginas_html do projeto
-for o in lista_paginas_html:
-    filename = (str(root)) +"\\results\\paginas_html\\paginas_html_" + str(indice_pagina) + ".txt"
-    with open(filename, 'a') as f:
-        f.write(str(o))
-    indice_pagina = indice_pagina - 1
-f.close()
+exporta_html(lista_paginas_html, indice_pagina)
